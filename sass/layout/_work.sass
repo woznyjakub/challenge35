@@ -1,0 +1,53 @@
+.work
+    padding-bottom: 0
+
+.work-images
+    display: grid
+    margin-top: 2em
+    grid-template: repeat(4, 1fr) / 1fr 1fr
+    img
+        width: 100%
+
+.work-image-item
+    +centering-by-position
+    text-align: center
+    color: $white
+    &::before
+        content: ''
+        +absolutely-stretched
+    .subheading
+        font-size: .8em
+        color: $white
+    &:nth-of-type(3)
+        grid-row-end: span 2
+    &.active
+        .work-text-wrapper
+            opacity: 1
+        &::before
+            background-image: $salmon-yellow-gradient-07
+
+.work-text-wrapper
+    opacity: 0
+    transition: .5s
+
+.work-slider-wrapper
+    padding: 4em 0
+    
+.work-slider-image
+    border-radius: 50%
+    margin: 0 auto
+
+.work-slider-text-wrapper .description
+    padding: 1em
+
+@media ($bp-landscape)
+    .work-images
+        grid-template: 1fr 1fr / repeat(4, 1fr)
+
+@media ($bp-desktop-large)
+    .work-image-item:hover
+        cursor: pointer
+        .work-text-wrapper
+            opacity: 1
+        &::before
+            background-image: $salmon-yellow-gradient-07

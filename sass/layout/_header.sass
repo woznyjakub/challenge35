@@ -1,0 +1,144 @@
+.header
+    position: relative
+
+.header-slider
+    max-width: initial
+    &:hover
+        cursor: default
+
+.header-slide
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100vw
+    background: 50% 50% / cover
+    &::before, &::after
+        content: ''
+        flex-grow: 1
+
+.header-superheading, .header-heading
+    font-size: 2.7em
+    color: $white
+
+.header-superheading
+    padding-bottom: 1em
+
+.header .heading-bottom-line
+    background-color: $white
+    margin: 0 auto
+
+.btn-learn-more
+    border: 4px solid $white
+    background-color: transparent
+    margin: 3em auto 4em
+
+.progress-bars
+    justify-content: space-between
+    position: absolute
+    left: 50%
+    bottom: 1em
+    width: 90%
+    transform: translateX(-50%)
+
+.progress-bar-wrapper
+    flex-basis: 47%
+
+.progress-bar
+    display: block
+    appearance: none
+    width: 100%
+    height: 8px
+    &::-webkit-progress-bar
+        background-color: $white
+        border-radius: 3px
+    &::-webkit-progress-value
+        background-color: $salmon
+        border-radius: 3px
+
+.section-name
+    +font-montserrat-bold
+    color: $white
+    text-transform: uppercase
+
+@media (max-width: 767px)
+    .header-slide-intro
+        background-image: $salmon-yellow-gradient-07, url('../img/header/eagle-mobile.jpg')
+
+    .header-slide-work
+        background-image: $salmon-yellow-gradient-07, url('../img/header/wave-mobile.jpg')
+
+    .header-slide-about
+        background-image: $salmon-yellow-gradient-07, url('../img/header/mountain-mobile.jpg')
+
+    .header-slide-contact
+        background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper-mobile.jpg')
+
+@media ($bp-landscape) and (max-width: 767px)
+    .header > *
+        padding-bottom: 0
+        margin-bottom: 0
+
+    .progress-bars
+        display: none
+
+@media ($bp-tablet) and (max-width: 1199px)
+    .header-slide-intro
+        background-image: $salmon-yellow-gradient-07, url('../img/header/eagle-tab.jpg')
+
+    .header-slide-work
+        background-image: $salmon-yellow-gradient-07, url('../img/header/wave-tab.jpg')
+
+    .header-slide-about
+        background-image: $salmon-yellow-gradient-07, url('../img/header/mountain-tab.jpg')
+
+    .header-slide-contact
+        background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper-tab.jpg')
+
+@media ($bp-tablet)
+    .header-superheading
+        font-size: 5em
+
+    .header-heading
+        font-size: 7em
+        line-height: 1em
+        padding-bottom: .8em
+
+@media ($bp-desktop-small)
+    .header-superheading
+        padding-bottom: 0
+
+    .header-heading
+        padding: 0 0 .5em
+        line-height: .9em
+
+    .progress-bars
+        flex-wrap: nowrap
+
+    .progress-bar-wrapper
+        min-width: 216px
+        padding-right: 24px
+        &:last-of-type
+            padding-right: 0
+
+@media ($bp-desktop-large)
+    .header-slide-intro
+        background-image: $salmon-yellow-gradient-07, url('../img/header/eagle.jpg')
+
+    .header-slide-work
+        background-image: $salmon-yellow-gradient-07, url('../img/header/wave.jpg')
+
+    .header-slide-about
+        background-image: $salmon-yellow-gradient-07, url('../img/header/mountain.jpg')
+
+    .header-slide-contact
+        background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper.jpg')
+
+    .header-superheading
+        font-size: 6em
+
+    .header-heading
+        font-size: 9em
+
+    .progress-bars
+        width: 1200px
+        bottom: 3em

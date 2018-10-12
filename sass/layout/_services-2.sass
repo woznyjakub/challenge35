@@ -1,0 +1,92 @@
+.services-2
+    margin-top: 3em
+
+.services-2-wrapper
+    display: flex
+    justify-content: center
+    margin: .5em auto
+    max-width: 1100px
+
+.services-2-image-wrapper
+    display: none
+
+.services-2-content-wrapper
+    border-left: $thin-border
+    border-right: $thin-border
+    border-bottom: $thin-border
+    
+.services-2-heading-wrapper
+    display: flex
+    border-top: $thin-border
+    transition-delay: .3s
+    i
+        padding: .25em .5em
+        &:first-of-type
+            color: $mint
+        &:last-of-type
+            color: #cbcbcb
+
+.services-2-subheading
+    flex-grow: 1
+    text-indent: 1em
+
+.services-2-content-item.active
+    .services-2-heading-wrapper
+        border-bottom: $thin-border
+    .services-2-description-wrapper
+            height: 8em
+    .fa-angle-up
+            transform: rotate(180deg)
+
+// Using max-height instead of height causes a bug with transition/transition-delay
+.services-2-description-wrapper
+        padding: 0 1em
+        overflow-y: scroll
+        height: 0
+        transition: 1s $scale-y-timing-function
+        &::-webkit-scrollbar
+            width: 6px
+            background-color: transparent
+        &::-webkit-scrollbar-track
+            background-color: #f7f7f7
+            border-radius: 3px
+        &::-webkit-scrollbar-thumb
+            background-color: $mint
+            border-radius: 3px
+
+.services-2-description
+    font-style: italic
+
+.services-2-slide-icon-wrapper
+    margin: 1em auto
+    text-align: center
+    border: 5px solid $mint
+    color: $mint
+    width: 120px
+    height: 120px
+    i
+        line-height: 110px
+        font-size: 3em
+
+@media ($bp-landscape)
+    .services-2-slide-icon-wrapper
+        margin-left: 0
+        margin-right: 0
+
+@media ($bp-tablet)
+    .services-2-image-wrapper
+        display: block
+        overflow: hidden
+        background: url('../img/wall-of-photos.jpg') 50% 50% / cover
+
+    .services-2-wrapper > *
+        flex-basis: 47%
+
+@media ($bp-desktop-large)
+    .services-2-wrapper
+        margin-top: 3em
+        margin-bottom: 3em
+    
+    .services-2
+        .fa-angle-up:not(.active)
+            cursor: pointer

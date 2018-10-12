@@ -1,0 +1,35 @@
+.testimonials
+    background: url('../img/mountains2.jpg') 50% 50% / cover
+    
+.testimonials-wrapper
+    padding: 1em 0
+
+.testimonials-item
+    +flex-item(25%, 75%)
+    justify-content: center
+    padding: .25em
+
+.testimonials-image-wrapper
+    align-self: flex-start
+    img
+        border-radius: 50%
+
+.testimonials-text-wrapper
+    padding-left: 1.5em
+    .subheading
+        margin-top: 0
+    .description
+        margin-left: -90px
+        text-align: justify
+
+@media ($bp-landscape)
+    .testimonials-text-wrapper .description
+        margin-left: 0
+        text-align: left
+
+@media ($bp-desktop-large)
+    .testimonials-wrapper
+        justify-content: space-between
+        & > *
+            flex-basis: 47%
+            margin-top: 2em

@@ -1,0 +1,86 @@
+
+.footer .subheading
+        margin: 1.5em 0
+
+.footer-company-logo
+    color: #ccc
+    margin: 0
+
+.footer-contact
+    .subheading
+        text-transform: lowercase
+        &::after
+            content: ''
+            display: block
+            padding-bottom: 1em
+            border-bottom: $thin-border
+            margin-bottom: 1em
+    i
+        padding-left: .35em
+        font-size: 1em
+        color: $mint
+    input
+        width: 100%
+        padding: 0 1em
+        line-height: 3em
+        border: $thin-border
+        margin-bottom: 1em
+    a
+        display: inline
+
+.footer-btn
+        width: 100%
+        background-color: $mint
+        border: $thin-border
+
+.footer-blog .subheading
+    font-size: 1em
+
+.footer-blog:last-of-type
+    display: none
+
+.footer-instagram
+    display: none
+
+.copyright-wrapper
+    max-width: 1280px
+    margin: 0 auto
+
+.copyright
+    +font-montserrat-bold
+    color: $mediumgray
+    text-align: center
+    margin-top: 1em
+    border-top: $thin-border
+    padding: 1em
+    span
+        color: $salmon
+
+@media ($bp-landscape)
+    .footer-blog
+        +flex-item(30%, 60%)
+        justify-content: space-between
+        margin-top: 1em
+        .subheading
+            margin-top: 0
+
+@media ($bp-tablet)
+    .footer-wrapper
+        justify-content: space-between
+
+    .footer-item
+        flex-basis: 47%
+
+    .footer-blog:last-of-type
+        display: flex
+
+@media ($bp-desktop-large)
+    .footer .subheading
+        margin-top: 0
+
+    .footer-item
+        flex-basis: 31%
+
+    .footer-instagram
+        display: block
+        flex-basis: 25%

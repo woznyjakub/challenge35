@@ -1,0 +1,159 @@
+.company-logo
+    +font-montserrat-bold
+    color: $white
+
+@media ($bp-desktop-large)
+    .company-logo
+        cursor: pointer
+
+.heading, .superheading
+    margin: 0
+
+.superheading
+    +font-kaushan-script
+    padding-top: .5em
+    text-align: center
+
+.heading
+    +font-montserrat-bold
+    padding-bottom: .5em
+    text-transform: uppercase
+    text-align: center
+
+span.break::before
+    content: '\A'
+    white-space: pre
+
+span.number
+    font-size: 1.3em
+
+.heading-bottom-line
+    width: 60px
+    height: 3px
+    background-color: $salmon
+
+header > .heading-bottom-line, .section-wrapper > .heading-bottom-line, section  > .heading-bottom-line
+    margin: 1em auto
+
+.btn
+    +font-montserrat-bold
+    display: block
+    padding: 0 32px
+    font-size: 1em
+    color: $white
+    line-height: 3em
+    text-transform: uppercase
+
+@media ($bp-desktop-large)
+    .btn:hover
+        background-color: $lightgray
+        color: $darkgray
+        cursor: pointer
+
+.number
+    +font-montserrat-bold
+
+.section-wrapper
+    padding: 0 1em
+
+.description
+    +font-roboto-normal
+    color: $mediumgray
+    font-size: 15px
+    line-height: 1.5em
+    margin: 0 auto
+    padding: 1em 0
+    max-width: 800px
+section > .description, .section-wrapper > .description
+    text-align: center
+
+.mint-shadow
+    background-color: $mint
+
+.flex-list
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    max-width: 1280px
+    margin: 0 auto
+    & > *
+        flex-basis: 90%
+
+.flex-list img
+    width: 100%
+    
+.flex-item
+    display: flex
+    & > *:first-of-type
+        flex-basis: 25%
+    & > *:last-of-type
+        flex-basis: 75%
+
+.subheading
+    +font-montserrat-normal
+    color: $darkgray
+    text-transform: uppercase
+
+.slider-wrapper
+    padding: 2em 0
+    background-color: $lightgray
+
+.slider
+    max-width: 1200px
+    margin: 0 auto
+
+.slide
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.slide .description
+    font-style: italic
+    padding: 1em
+
+.slide .heading-bottom-line
+    float: left
+    margin: .6em 1em
+
+.author
+    +font-kaushan-script
+    font-size: 1.5em
+    line-height: 1em
+
+.glide__arrow
+    top: 30%
+    color: #cbcbcb
+    border-style: none
+    box-shadow: none
+    text-shadow: none
+
+.glide__arrow--left
+    left: 0
+
+.glide__arrow--right
+    right: 0
+
+.glide__bullet--active
+    background-color: transparent
+    
+@media ($bp-landscape)
+    .slide
+        flex-direction: row
+        *:last-of-type
+            flex-basis: 60%
+
+    .glide__arrow
+        top: 50%
+
+@media ($bp-desktop-large)
+    .glide__arrow--left
+        left: 1em
+
+    .glide__arrow--right
+        right: 1em
+
+.barely-visible-text
+    +font-roboto-normal
+    font-style: italic
+    color: $mediumgray
+    font-weight: 400

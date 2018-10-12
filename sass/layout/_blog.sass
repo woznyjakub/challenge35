@@ -1,0 +1,104 @@
+.blog-articles
+    padding: 1em 0 3em
+
+.blog-article
+    margin-top: 2em
+    &:last-of-type
+        display: none
+
+.blog-image-wrapper
+    position: relative
+
+.blog-date
+    position: absolute
+    left: -1em
+    bottom: 1.5em
+    padding: .5em
+    width: 75px
+    background-color: $mint
+    text-align: center
+    .number
+        display: block
+        color: $white
+        font-size: 3em
+    .barely-visible-text
+        display: block
+        color: $white
+
+.blog-info
+    i
+        padding-right: .25em
+        color: $mint
+        font-size: 1em
+        &:last-of-type
+            padding-left: 1em
+    &::before
+        content: ''
+        display: block
+        margin-top: .5em
+        border-top: $thin-border
+        padding-top: 1em
+
+.map
+    +centering-by-position
+    min-height: 50vw
+    background: url('../img/earth.jpg') 0% 50% / cover
+    cursor: pointer
+    transition: .5s
+    &.active
+        background-image: none
+        background-color: $white
+        .google-map
+            opacity: 1
+            height: 60vh
+        .map-text-wrapper
+            opacity: 0
+            display: none
+        & + * .map-close
+            opacity: 1
+            &:hover
+                cursor: pointer
+
+.map-close-wrapper
+    text-align: right
+
+.map-close
+    padding: .5em
+    opacity: 0
+    transition: opacity .3s
+    &:hover
+        cursor: default
+
+.map-text-wrapper
+    text-align: center
+    color: $salmon
+    *
+        display: block
+    .heading
+        margin: 1em auto
+    .heading-bottom-line
+        margin: 0 auto
+
+.google-map
+    transition: 1s $scale-y-timing-function
+    height: 200px
+    width: 100%
+    opacity: 0
+
+@media ($bp-landscape)
+    .blog-articles
+        justify-content: space-between
+        & > *
+            flex-basis: 47%
+
+    .map
+        min-height: 200px
+
+@media ($bp-tablet)
+    .blog-article
+        flex-basis: 31%
+        &:last-of-type
+            display: block
+
+.height0
+    height: 0

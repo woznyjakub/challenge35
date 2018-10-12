@@ -1,0 +1,25 @@
+.services-1-icon-wrapper
+    text-align: center
+    line-height: 3em
+
+.services-1-item
+    +flex-item(25%, 75%)
+
+@media ($bp-landscape)
+    .services-1-wrapper
+        justify-content: space-around
+    .services-1-item
+        flex-basis: 49%
+
+@media ($bp-tablet)
+    .services-1-wrapper
+        padding-top: 2em
+    .services-1-item
+        flex-basis: 30%
+    .services-1-icon-wrapper
+        text-align: left
+
+@media ($bp-desktop-large)
+    .services-1-icon-wrapper i
+        font-size: 3em
+        color: $mint

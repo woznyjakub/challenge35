@@ -1,0 +1,118 @@
+.about
+    padding-bottom: 0
+
+.about-mint-shadow
+    margin: .5em
+    &:nth-of-type(2), &:nth-of-type(3)
+        display: none
+
+.about-image-wrapper
+    +centering-by-position
+    transition: .15s
+    &::before
+        content: ''
+        +absolutely-stretched
+    &.active
+        transform: translate(-5px,-5px) 
+        &::before
+            background-image: $salmon-yellow-gradient-07
+            transition: .3s
+        .about-feature-wrapper
+            opacity: 1
+
+.about-image
+    width: 100%
+
+.about-feature-wrapper
+    +font-montserrat-bold
+    color: $white
+    text-align: center
+    text-transform: uppercase
+    opacity: 0
+    transition: .3s
+    width: 100%
+    i
+        padding-bottom: .25em
+
+.counter
+    background-color: $mint
+    margin: 3em 0 1em
+    transform: scaleY(0)
+    transform-origin: center top
+    transition: transform 1s .3s $scale-y-timing-function
+    &.active
+        transform: scaleY(1)
+        .counter-items
+            opacity: 1
+            transition: opacity .5s 1.45s ease-in
+
+.counter-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 1200px
+    margin: 0 auto
+    opacity: 0
+
+.counter-item
+    flex-basis: 33%
+    flex-grow: 1
+    padding: 1em .5em
+    color: $white
+    text-align: center
+    border-left: 1px solid $white
+    border-bottom: 1px solid $white
+    &:last-of-type
+        border-right: 1px solid $white
+
+.counter-number
+    +font-montserrat-bold
+    display: block
+    padding: .25em
+    font-size: 2em
+
+.counter-feature
+    +font-montserrat-normal
+    font-size: .7em
+    text-transform: uppercase
+
+@media ($bp-landscape)
+    .about-mint-shadow
+        flex-basis: 47%
+        &:nth-of-type(2)
+            display: block
+
+    .counter-item
+        flex-wrap: nowrap
+
+    .counter-item
+        flex-basis: 20%
+        flex-grow: 0
+
+@media ($bp-tablet)
+    .about-mint-shadow
+        flex-basis: 31%
+        &:nth-of-type(3)
+            display: block
+
+    .counter-item
+        padding-top: 2em
+        padding-bottom: 2em
+
+@media ($bp-desktop-large)
+    .about-images
+        justify-content: space-between
+
+    .about-image-wrapper:hover::before
+        background-image: $salmon-yellow-gradient-07
+        transition: .3s
+
+    .about-mint-shadow:hover
+        .about-image-wrapper
+            transform: translate(-5px,-5px)
+        .about-feature-wrapper
+            opacity: 1
+
+    .counter-item
+        padding-top: 4em
+        padding-bottom: 4em

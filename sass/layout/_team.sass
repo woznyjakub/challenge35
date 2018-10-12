@@ -1,0 +1,83 @@
+.team-item:last-of-type
+    display: none
+    
+.team-features-wrapper
+    padding: 1em 0
+    text-align: center
+    *:first-of-type
+        margin-bottom: .5em
+    *:last-of-type
+        margin-top: 0
+
+.team-image-wrapper
+    +centering-by-position
+    transition: .3s
+    &::before
+        content: ''
+        +absolutely-stretched
+
+.team-icons
+    display: inline-flex
+    transition: .5s
+    opacity: 0
+    z-index: -1
+    i
+        color: $salmon
+        background-color: $yellow
+        line-height: .9em
+        padding: 4px
+        transition: .3s
+
+.team-item.active
+    .team-image-wrapper
+        transform: translate(-5px, -5px)
+    .team-icons
+        z-index: auto
+        opacity: 1
+    .team-image-wrapper::before
+        background-image: $salmon-yellow-gradient-07
+
+.team-logos-wrapper
+    margin: 2em 0 
+    padding: 2em 0
+    background-color: $lightgray
+
+.team-logos
+    width: 153%
+    max-width: 1200px
+    margin: 0 auto
+
+@media ($bp-landscape)
+    .team-images
+        flex-flow: row nowrap
+        justify-content: space-between
+        & > *
+            flex-basis: 49%
+
+    .team-logos
+        width: 100%
+
+@media ($bp-tablet)
+    .team-item:last-of-type
+        display: block
+
+    .team-images > *
+        flex-basis: 32%
+
+    .team-logos-wrapper
+        margin-bottom: 0
+
+@media ($bp-desktop-large)
+    .team-item
+        i:hover
+            color: $white
+            background-color: $salmon
+            cursor: pointer
+        &:hover
+            .team-image-wrapper
+                transform: translate(-5px, -5px)
+            .team-icons
+                z-index: auto
+                opacity: 1
+            .team-image-wrapper::before
+                background-image: $salmon-yellow-gradient-07

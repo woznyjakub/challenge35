@@ -1,0 +1,40 @@
+html, body, ul, ol ,p
+    margin: 0
+    padding: 0
+
+ul, ol
+    list-style-type: none
+    
+*
+    box-sizing: border-box
+    
+.main-container
+    max-width: 1920px
+    margin: 0 auto
+    overflow-x: hidden
+
+footer
+    padding: 0 1em
+
+@media ($bp-desktop-large)
+    section
+        padding-top: 3em
+        padding-bottom: 3em
+        
+img, a
+    display: block
+
+i
+        font-size: 2.2em
+        line-height: 1.6em
+
+body
+    background-color: $white
+    &::-webkit-scrollbar
+        width: 8px
+    &::-webkit-scrollbar-track
+        background-color: $lightgray
+    &::-webkit-scrollbar-thumb
+        margin: 0 auto
+        background-color: #00967a
+        border-radius: 4px

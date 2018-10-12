@@ -1,0 +1,36 @@
+/* fonts */
+=font-kaushan-script()
+    font-family: 'kaushan script', sans-serif
+
+=font-montserrat-normal()
+    font-family: 'montserrat', sans-serif
+
+=font-montserrat-bold()
+    font-family: 'montserrat', sans-serif
+    font-weight: 700
+
+=font-roboto-normal()
+    font-family: 'roboto', sans-serif
+
+/* other */
+=centering-by-position()
+    position: relative
+    & > div
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+
+=absolutely-stretched()
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+
+=flex-item($item1-width, $item2-width)
+    display: flex
+    & > *:first-of-type
+        flex-basis: $item1-width
+    & > *:last-of-type
+        flex-basis: $item2-width
