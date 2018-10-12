@@ -13,10 +13,15 @@ $(".nav .company-logo, .nav-list-item, .header .btn-learn-more").on('click', fun
     }, 1200)
 })
 
-/* hamburger */
+const $nav = $('.nav')
+$window.on('resize', () => {
+    if (window.innerWidth >= 992) $nav.removeClass('active')
+})
+
+// hamburger 
 
 function toggleMenu() {
-    $('.nav').toggleClass('active')
+    $nav.toggleClass('active')
 }
 $('.hamburger').on('click', toggleMenu)
 
