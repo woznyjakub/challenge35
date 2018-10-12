@@ -6,6 +6,7 @@ $document = $(document)
 $(".nav .company-logo, .nav-list-item, .header .btn-learn-more").on('click', function () {
     const destination = '.' + $(this).attr('data-destination')
     if ($(this).attr('data-menu-el') && window.innerWidth < 992) toggleMenu()
+    else if ($(this).attr('data-destination') === 'header') $nav.removeClass('active')
 
     $('html, body').animate({
         scrollTop: $(destination).offset().top - 69, //It's constant value of nav's height (not active), problem with long transition on nav-list
