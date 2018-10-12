@@ -1,9 +1,9 @@
 $window = $(window)
 $document = $(document)
 
-/* nav */
+/* nav, header buttons */
 
-$(".nav-list-item").on('click', function () {
+$(".nav .company-logo, .nav-list-item, .header .btn-learn-more").on('click', function () {
     const destination = '.' + $(this).attr('data-destination')
     if (window.innerWidth < 1200) showMenu()
     $('html, body').animate({
