@@ -31,10 +31,9 @@ i
 body
     background-color: $white
     &::-webkit-scrollbar
-        width: 8px
+        width: 16px
     &::-webkit-scrollbar-track
-        background-color: $lightgray
+        background-color: #aaa
     &::-webkit-scrollbar-thumb
-        margin: 0 auto
-        background-color: #00967a
-        border-radius: 4px
+        background-image: linear-gradient(90deg, transparent 0px ,transparent 4px ,$white 4px, $white 12px ,transparent 12px,transparent 16px)
+        border-radius: 8px

@@ -27,17 +27,22 @@
 .nav-wrapper
     display: flex
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: space-between
+    align-items: center
     max-width: 1200px
     margin: 0 auto
+    padding: .5em .25em
+
+.nav__logo 
+    margin: 0
 
 .hamburger
-    width: 56px
-    height: 32px
+    width: 40px
+    height: 24px
     display: flex
     flex-direction: column
     justify-content: space-between
-    padding: 1em
+    padding: .25em
     box-sizing: content-box
 
 .hamburger-line
@@ -74,10 +79,18 @@
     .nav.active .nav-list
         height: 210px
 
+@media ($bp-tablet)
+    .nav-wrapper
+        padding-top: 0.75em
+        padding-bottom: 0.75em
+        
 @media ($bp-desktop-small)
+    .nav-wrapper
+        padding-top: .25em
+        padding-bottom: .25em
+
     .company-logo
         font-size: 2em
-        margin: .5em 0
 
     nav .hamburger
         display: none
@@ -92,10 +105,14 @@
         flex-basis: auto
         padding: 0 1.5em
         font-size: 1em
+        line-height: 2em
 
 @media ($bp-desktop-large)
     .nav-wrapper
-        padding: 0 1.5em
+        padding-top: .5em
+        padding-bottom: .5em
+
+    .nav-wrapper
         justify-content: space-between
 
     .nav-list-item::before

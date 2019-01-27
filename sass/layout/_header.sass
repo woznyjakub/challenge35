@@ -9,15 +9,13 @@
 .header-slide
     display: flex
     flex-direction: column
-    min-height: 100vh
+    padding: 4em 0 3em
     width: 100vw
     background: 50% 50% / cover
-    &::before, &::after
-        content: ''
-        flex-grow: 1
+    justify-content: center
 
 .header-superheading, .header-heading
-    font-size: 2.7em
+    font-size: 2.5em
     color: $white
 
 .header-superheading
@@ -73,13 +71,16 @@
     .header-slide-contact
         background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper-mobile.jpg')
 
-@media ($bp-landscape) and (max-width: 767px)
-    .header *:not(.heading)
-        padding-bottom: 0
+@media ($bp-landscape)
+    .header-slide
+        padding-bottom: 7em
+
+    .btn-learn-more
         margin-bottom: 0
 
-    .progress-bars
-        display: none
+    .header-superheading
+        padding-bottom: 0
+        
 
 @media ($bp-tablet) and (max-width: 1199px)
     .header-slide-intro
@@ -95,6 +96,9 @@
         background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper-tab.jpg')
 
 @media ($bp-tablet)
+    .header-slide
+        padding: 6em 0 14em
+
     .header-superheading
         font-size: 5em
 
@@ -104,6 +108,9 @@
         padding-bottom: .8em
 
 @media ($bp-desktop-small)
+    .header-slide
+        padding-bottom: 8em
+
     .header-superheading
         padding-bottom: 0
 
@@ -133,12 +140,10 @@
     .header-slide-contact
         background-image: $salmon-yellow-gradient-07, url('../img/header/skyscraper.jpg')
 
-    .header-superheading
-        font-size: 6em
-
-    .header-heading
-        font-size: 9em
-
     .progress-bars
         width: 1200px
         bottom: 3em
+
+@media ($bp-super-large)
+    .header-slide
+        min-height: 100vh;
