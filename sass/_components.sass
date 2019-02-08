@@ -159,7 +159,12 @@ section > .description, .section-wrapper > .description
 
 .barely-visible-text
     +font-roboto-normal
+    font-size: 14px
     font-style: italic
     color: $mediumgray
     font-weight: 400
     margin: .5em 0 1em
+
+@media ($bp-desktop-large)
+    .barely-visible-text
+        font-size: 16px
